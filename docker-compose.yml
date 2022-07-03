@@ -4,7 +4,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    image: nahidacm/laravel-php-nginx:7.4
+    image: nahidacm/laravel-php-nginx:8.0
     container_name: ${COMPOSE_PROJECT_NAME:?err}_application
     restart: unless-stopped
     environment:
@@ -18,7 +18,6 @@ services:
       - "${DOCKER_NGINX_HOST_PORT:?err}:80"
     volumes:
       - ./:/app
-      - ./docker-compose/application/etc/php/conf.d/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     networks:
       - laravelnetwork
 
