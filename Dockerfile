@@ -1,4 +1,4 @@
-FROM webdevops/php-nginx:7.4
+FROM webdevops/php-nginx:8.0
 WORKDIR /app
 
 # Service configuration
